@@ -3,26 +3,29 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
 
 module.exports = {
-    content: ['./index.html'],
+    content: ['./**/*.html'],
     theme: {
         fontFamily: {
-            'title': ['Noto Sans', ...defaultTheme.fontFamily.sans],
+            'sans': ['"Source Sans 3"', ...defaultTheme.fontFamily.sans],
         },
         extend: {
+            backgroundImage: {
+                'pattern': "linear-gradient(to right,rgba(245,245,245,.8),rgba(245,245,245,.8)),url('/bg.svg')",
+            },
             colors: {
-                olivine: {
-                    '50': '#f6f8ed',
-                    '100': '#e9f0d7',
-                    '200': '#d4e3b3',
-                    '300': '#b9d086',
-                    '400': '#a7c270',
-                    '500': '#80a042',
-                    '600': '#637f31',
-                    '700': '#4c6229',
-                    '800': '#3f4f25',
-                    '900': '#374423',
-                    '950': '#1b240f',
-                }
+                'theme': {
+                    '50': '#f2f7f3',
+                    '100': '#e0ebe0',
+                    '200': '#c3d7c6',
+                    '300': '#9bbaa1',
+                    '400': '#6f9878',
+                    '500': '#4f7a5a',
+                    '600': '#3b6045',
+                    '700': '#2f4d38',
+                    '800': '#273e2e',
+                    '900': '#213327',
+                    '950': '#121c16',
+                },
             }
         },
     },

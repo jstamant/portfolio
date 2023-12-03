@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+
+
+<head>
+
+{{ partial "head.html" . }}
+
+</head>
+
+
+<body class="text-center text-xl text-neutral-700">
+
+  <header class="fixed w-full z-50 text-neutral-800 bg-white h-16 pl-4 md:pl-12 text-lg uppercase font-bold shadow-xl">
+    {{- $home_link := "/" | absURL }}
+    {{- if .IsHome }}
+      {{- $home_link = "#home" }}
+    {{- end }}
+    <div class="h-full flex justify-between">
+      <a class="flex items-center transition-colors duration-300 hover:text-theme-500" href="{{ $home_link }}">
+        <img class="h-12 mr-4 rounded-full" src="{{ "profile.png" | relURL }}" />
+        <p>Justin St-Amant</p>
+      </a>
+      <nav class="text-base">
+        <ul class="h-full flex items-center">
+          <li class="hidden md:flex">
+            <a class="px-8 py-4 transition-colors duation-300 hover:text-theme-500" href="{{ $home_link }}">Home</a>
+          </li>
+          <li class="hidden md:flex">
+            <a class="px-8 py-4 transition-colors duation-300 hover:text-theme-500" href="#about">About</a>
+          </li>
+          <li class="hidden md:flex">
+            <a class="px-8 py-4 transition-colors duation-300 hover:text-theme-500" href="#projects">Projects</a>
+          </li>
+          <li class="hidden md:flex">
+            <a class="px-8 py-4 transition-colors duation-300 hover:text-theme-500" href="#contact">Contact</a>
+          </li>
+          <li class="md:hidden h-full flex items-center">
+            <input type="checkbox" class="peer group w-16 h-16 z-10 opacity-0 absolute right-0" />
+            <a class="w-16 peer-checked:hidden"><i class="fa-solid fa-bars text-3xl"></i></a>
+            <a class="w-16 hidden peer-checked:block"><i class="fa-solid fa-xmark text-3xl"></i></a>
+            <nav class="hidden border text-base md:invisible z-0 bg-white peer-checked:block right-0 top-16 absolute flex flex-col items-center divide-y">
+              <a class="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="{{ $home_link }}"><p>Home</p></a>
+              <a class="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="#about"><p>About</p></a>
+              <a class="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="#projects"><p>Projects</p></a>
+              <a class="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="#contact"><p>Contact</p></a>
+            </nav>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <section id="home" class="h-screen px-2 bg-pattern">
+    <div class="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4">
+      <h1 class="font-title uppercase text-6xl font-bold text-neutral-800">Justin St-Amant, here</h1>
+      <p class="mt-8 mb-10 text-2xl">{{ .Site.Params.subtitle }}</p>
+      <a class="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
+        href="#about">See why
+        <i class="fa-solid fa-rocket ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="about" class="bg-neutral-50 py-24">
+    <div class="w-11/12 mx-auto">
+      <h1 class="text-5xl font-bold uppercase text-neutral-800">About Me</h1>
+      <div class="h-1.5 w-12 rounded bg-theme-500 top-full mx-auto mt-4 mb-8"></div>
+      <div class="grid md:grid-cols-2 gap-4 my-8 justify-around text-left">
+        <div class="mb-8">
+          <h2 class="text-3xl font-bold text-neutral-800 my-4">Get to know me!</h2>
+          <p class="my-4">I'm a <strong>Frontend Web Developer</strong>,
+          bringing design and ideation to fruition through web technologies.
+          Check out some of my work in the <a class="font-bold hover:text-theme-700"
+              href="#projects">Projects<i class="fa-solid fa-list-ul ml-1 text-base"></i>
+            </a> section below.</p>
+          <p class="my-4">I aim to be versatile in all facets - not just
+            programming! I pull my knowledge from many disciplines: engineering,
+            telecommunications, woodworking, skateboarding,
+            <a class="font-bold hover:text-theme-700" href="https://www.tabletop.engineering/" target="blank_">role-playing games<i class="fa-solid fa-arrow-up-right-from-square ml-1 text-base"></i></a>,
+            life-coaching, and more!</p>
+          <p class="my-4">I'm <strong>currently looking for a development job</strong>. If you
+          like what you see and you think we'd be a good match, then don't hesitate
+          to contact me.</p>
+        </div>
+        <div class="mb-8">
+          <h2 class="text-3xl font-bold text-neutral-800 my-4">Technical Skills</h2>
+          <div class="flex flex-wrap">
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">HTML</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">CSS</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">C/C++</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Git</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">JavsScript</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">TailwindCSS</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Node</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">React</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Linux</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Responsive Design</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">SQL Basics</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Frameworks & Libraries</div>
+          </div>
+          <h2 class="text-3xl font-bold text-neutral-800 my-4">Personal Management Skills</h2>
+          <div class="flex flex-wrap">
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Communication</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Prioritizing</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Planning</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Writing & Documenting</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Troubleshooting</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Time & Task Management</div>
+            <div class="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Autonomous</div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <a class="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
+        href="#projects">My projects
+        <i class="fa-solid fa-list-ul ml-2"></i>
+      </a>
+    </div>
+  </section>
+
+  <section id="projects" class="py-24">
+    <div class="w-11/12 md:w-3/4 mx-auto">
+      <h1 class="text-5xl font-bold uppercase my-4 text-neutral-800">Projects</h1>
+      <div class="h-1.5 w-12 rounded bg-theme-500 top-full mx-auto mt-4 mb-8"></div>
+      <p class="my-8">Here are a few of my projects - available for you to check out!</p>
+    </div>
+    <div class="my-8 mx-auto w-11/12 lg:w-3/4 text-left flex flex-col gap-24">
+      <div class="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
+        <img class="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="{{ "haiku.png" | relURL }}"></img>
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h2 class="font-bold text-3xl">Haiku React App</h2>
+          <p>I made this little React app to show-off some of my "buzzword haiku".</p>
+          <p>This project's goal was to learn React. Success!</p>
+          <a class="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
+            href="https://jstamant-haiku.netlify.app/" target="blank_">
+            <p>See live</p>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+          <a class="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600"
+            href="https://github.com/jstamant/haiku" target="blank_">
+            <p>Git Repo</p>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
+        <img class="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="{{ "zgp.png" | relURL }}"></img>
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h2 class="font-bold text-3xl">C/C++ Game</h2>
+          <p>A dive into low-level game programming with C/C++.</p>
+          <p>Whenever I spend time on this project, I find myself learning more about data-structures and algorithms.</p>
+          <a class="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600"
+            href="https://github.com/jstamant/zombie-game-project" target="blank_">
+            <p>Git Repo</p>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+        </div>
+      </div>
+      <div class="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
+        <img class="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="{{ "burger-burner.jpg" | relURL }}"></img>
+        <div class="flex flex-col items-center md:items-start gap-4">
+          <h2 class="font-bold text-3xl">HTML5 Game</h2>
+          <p>My first project for learning JavaScript.</p>
+          <p>I wanted to learn how to make portable games using HTML5 and web technologies. Easily done with the help of the Phaser framework.</p>
+          <a class="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
+            href="https://jstamant.itch.io/burger-burner" target="blank_">
+            <p>See live</p>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+          <a class="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600"
+            href="https://github.com/jstamant/burger-burner-deluxe" target="blank_">
+            <p>Git Repo</p>
+            <i class="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" class="py-24 bg-pattern">
+    <div class="w-11/12 mx-auto">
+      <h1 class="text-5xl font-bold uppercase my-4 text-neutral-800">Contact</h1>
+      <div class="h-1.5 w-12 rounded bg-theme-500 top-full mx-auto mt-4 mb-8"></div>
+      <div class="my-8">
+        <p class="my-4">Feel free to reach out!</p>
+        <p class="my-4">I'm looking for a development position and would love to hear from you if you're interested!<br />I'm excited to see what kind of challenges the future brings!</p>
+      </div>
+      <a class="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
+        href="mailto:jstamant24@gmail.com">
+        <i class="fa-regular fa-message mr-2"></i>
+        Message me</a>
+      </a>
+    </div>
+  </section>
+
+  <footer class="bg-neutral-900 text-white py-8 text-left text-base">
+    <div class="flex flex-col md:flex-row-reverse justify-between w-11/12 mx-auto">
+      <div class="my-8">
+        <h1 class="uppercase font-bold mb-4 text-xl">Socials</h1>
+        <nav class="text-2xl">
+          <a class="fa-brands fa-github px-1" href="https://github.com/jstamant"></a>
+          <a class="fa-brands fa-linkedin px-1" href="https://www.linkedin.com/in/justinstamant/"></a>
+          <a class="fa-brands fa-instagram px-1" href="https://www.instagram.com/jstamant_/"></a>
+          <a class="fa-regular fa-envelope px-1" href="mailto:jstamant24@gmail.com"></a>
+        </nav>
+      </div>
+      <div class="my-8">
+        <h1 class="uppercase font-bold mb-4 text-xl">Justin St-Amant</h1>
+        <p>{{ .Site.Params.subtitle }}</p>
+      </div>
+    </div>
+  </footer>
+
+</body>
+
+</html>
