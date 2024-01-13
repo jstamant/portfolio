@@ -1,6 +1,0 @@
-baseURL = 'https://jstamant.com/'
-languageCode = 'en-us'
-title = 'Justin St-Amant - Developer'
-
-[ params ]
-subtitle = 'A Frontend Developer, ready to hit the ground running on your codebase.'
