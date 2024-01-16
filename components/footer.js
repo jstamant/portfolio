@@ -15,7 +15,7 @@ const Footer = () => {
         </div>
         <div className="my-8">
           <h1 className="uppercase font-bold mb-4 text-xl">Justin St-Amant</h1>
-          <p>A Frontend Developer, ready to hit the ground running on your codebase.</p>
+          <p>{process.env.site.subtitle}</p>
         </div>
       </div>
     </footer>

@@ -8,7 +8,7 @@ export default function Page() {
       <section id="home" className="h-screen px-2 bg-pattern">
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4">
           <h1 className="font-title uppercase text-6xl font-bold text-neutral-800">Justin St-Amant, here</h1>
-          <p className="mt-8 mb-10 text-2xl">A Frontend Developer, ready to hit the ground running on your codebase.</p>
+          <p className="mt-8 mb-10 text-2xl">{process.env.site.subtitle}</p>
           <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
     href="#about">See why
             <i className="fa-solid fa-rocket ml-2"></i>
