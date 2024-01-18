@@ -1,6 +1,7 @@
 import './globals.css'
 import { Source_Sans_3 } from 'next/font/google'
 import Script from 'next/script'
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const source_sans = Source_Sans_3({
   subsets: ['latin'],
@@ -29,6 +30,7 @@ export default function RootLayout({ children }) {
     <html lang="en" className={`${source_sans.variable}`}>
       <body className="text-center text-xl text-neutral-700">{children}</body>
       <Script src="https://kit.fontawesome.com/ae8eac997d.js" crossOrigin="anonymous" />
+      <GoogleAnalytics gaId="G-8RBZ9QXX9H" />
     </html>
   )
 }
