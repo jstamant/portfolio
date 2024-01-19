@@ -1,6 +1,10 @@
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowUpRightFromSquare, faListUl, faRocket } from '@fortawesome/free-solid-svg-icons'
+import { faMessage } from '@fortawesome/free-regular-svg-icons'
+
 export default function Page() {
   return (
     <>
@@ -11,7 +15,7 @@ export default function Page() {
           <p className="mt-8 mb-10 text-2xl">{process.env.site.subtitle}</p>
           <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
     href="#about">See why
-            <i className="fa-solid fa-rocket ml-2"></i>
+            <FontAwesomeIcon icon={faRocket} className="ml-2" />
           </a>
         </div>
       </section>
@@ -23,8 +27,8 @@ export default function Page() {
           <div className="grid md:grid-cols-2 gap-4 my-8 justify-around text-left">
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-neutral-800 my-4">Get to know me!</h2>
-              <p className="my-4">I'm a <strong>Frontend Web Developer</strong>, bringing design and ideation to fruition through web technologies. Check out some of my work in the <a className="font-bold hover:text-theme-700" href="#projects">Projects<i className="fa-solid fa-list-ul ml-1 text-base"></i></a> section below.</p>
-              <p className="my-4">I aim to be versatile in all facets - not just programming! I pull my knowledge from many disciplines: engineering, telecommunications, woodworking, skateboarding, <a className="font-bold hover:text-theme-700" href="https://www.tabletop.engineering/" target="_blank">role-playing games<i className="fa-solid fa-arrow-up-right-from-square ml-1 text-base"></i></a>, life-coaching, and more!</p>
+              <p className="my-4">I'm a <strong>Frontend Web Developer</strong>, bringing design and ideation to fruition through web technologies. Check out some of my work in the <a className="font-bold hover:text-theme-700" href="#projects">Projects<FontAwesomeIcon icon={faListUl} className="ml-1 text-base" /></a> section below.</p>
+              <p className="my-4">I aim to be versatile in all facets - not just programming! I pull my knowledge from many disciplines: engineering, telecommunications, woodworking, skateboarding, <a className="font-bold hover:text-theme-700" href="https://www.tabletop.engineering/" target="_blank">role-playing games<FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-1 text-base" /></a>, life-coaching, and more!</p>
               <p className="my-4">I'm <strong>currently looking for a development job</strong>. If you like what you see and you think we'd be a good match, then don't hesitate to contact me.</p>
             </div>
             <div className="mb-8">
@@ -56,7 +60,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300" href="#projects">My projects<i className="fa-solid fa-list-ul ml-2"></i></a>
+        <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300" href="#projects">My projects<FontAwesomeIcon icon={faListUl} className="ml-2" /></a>
       </section>
 
       <section id="projects" className="py-24">
@@ -75,11 +79,11 @@ export default function Page() {
               <a className="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
                 href="https://jstamant-haiku.netlify.app/" target="_blank">
                 <p>See live</p>
-                <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
               </a>
               <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600" href="https://github.com/jstamant/haiku" target="_blank">
                 <p>Git Repo</p>
-                <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
               </a>
             </div>
           </div>
@@ -91,7 +95,7 @@ export default function Page() {
               <p>Whenever I spend time on this project, I find myself learning more about data-structures and algorithms.</p>
               <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600" href="https://github.com/jstamant/zombie-game-project" target="_blank">
                 <p>Git Repo</p>
-                <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
               </a>
             </div>
           </div>
@@ -104,12 +108,12 @@ export default function Page() {
               <a className="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
                 href="https://jstamant.itch.io/burger-burner" target="_blank">
                 <p>See live</p>
-                <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
               </a>
               <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600"
                 href="https://github.com/jstamant/burger-burner-deluxe" target="_blank">
                 <p>Git Repo</p>
-                <i className="fa-solid fa-arrow-up-right-from-square ml-2"></i>
+                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
               </a>
             </div>
           </div>
@@ -125,7 +129,7 @@ export default function Page() {
             <p className="my-4">I'm looking for a development position and would love to hear from you if you're interested!<br />I'm excited to see what kind of challenges the future brings!</p>
           </div>
           <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
-            href="mailto:jstamant24@gmail.com"><i className="fa-regular fa-message mr-2"></i>Message me</a>
+            href="mailto:jstamant24@gmail.com"><FontAwesomeIcon icon={faMessage} className="mr-2" />Message me</a>
         </div>
       </section>
 

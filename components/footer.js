@@ -1,5 +1,9 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faGithub, faInstagram, faLinkedin } from '@fortawesome/free-brands-svg-icons'
+import { faEnvelope } from '@fortawesome/free-regular-svg-icons'
+
 const Footer = () => {
   return (
     <footer className="bg-neutral-900 text-white py-8 text-left text-base">
@@ -7,10 +11,10 @@ const Footer = () => {
         <div className="my-8">
           <h1 className="uppercase font-bold mb-4 text-xl">Socials</h1>
           <nav className="text-2xl">
-            <a className="fa-brands fa-github px-1" href="https://github.com/jstamant"></a>
-            <a className="fa-brands fa-linkedin px-1" href="https://www.linkedin.com/in/justinstamant/"></a>
-            <a className="fa-brands fa-instagram px-1" href="https://www.instagram.com/jstamant_/"></a>
-            <a className="fa-regular fa-envelope px-1" href="mailto:jstamant24@gmail.com"></a>
+            <a className="px-1" href="https://github.com/jstamant"><FontAwesomeIcon icon={faGithub} /></a>
+            <a className="px-1" href="https://www.linkedin.com/in/justinstamant/"><FontAwesomeIcon icon={faInstagram} /></a>
+            <a className="px-1" href="https://www.instagram.com/jstamant_/"><FontAwesomeIcon icon={faLinkedin} /></a>
+            <a className="px-1" href="mailto:jstamant24@gmail.com"><FontAwesomeIcon icon={faEnvelope} /></a>
           </nav>
         </div>
         <div className="my-8">

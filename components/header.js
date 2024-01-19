@@ -1,5 +1,8 @@
 import React from 'react'
 
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faBars, faXmark } from '@fortawesome/free-solid-svg-icons'
+
 // TODO get home link added?
 /* {{- $home_link := "/" | absURL }}
  * {{- if .IsHome }}
@@ -32,8 +35,8 @@ const Header = () => {
             </li>
             <li className="md:hidden h-full flex items-center">
               <input type="checkbox" className="peer group w-16 h-16 z-10 opacity-0 absolute right-0" />
-              <a className="w-16 peer-checked:hidden"><i className="fa-solid fa-bars text-3xl"></i></a>
-              <a className="w-16 hidden peer-checked:block"><i className="fa-solid fa-xmark text-3xl"></i></a>
+              <a className="w-16 peer-checked:hidden"><FontAwesomeIcon icon={faBars} className="text-3xl" /></a>
+              <a className="w-16 hidden peer-checked:block"><FontAwesomeIcon icon={faXmark} className="text-3xl" /></a>
               <nav className="hidden border text-base md:invisible z-0 bg-white peer-checked:block right-0 top-16 absolute flex flex-col items-center divide-y">
                 <a className="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="/"><p>Home</p></a>
                 <a className="transition-colors duation-300 hover:text-theme-500 w-32 h-16 flex items-center justify-center" href="#about"><p>About</p></a>
