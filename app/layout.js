@@ -31,7 +31,7 @@ export const viewport = {
 
 export default function RootLayout({ children }) {
   return (
-    <html lang="en" className={`${source_sans.variable}`}>
+    <html lang="en" className={`${source_sans.variable} scroll-smooth`}>
       <body className="text-center text-xl text-neutral-700">{children}</body>
       <GoogleAnalytics gaId="G-8RBZ9QXX9H" />
     </html>
