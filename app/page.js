@@ -4,6 +4,7 @@ import Header from '../components/header'
 import Footer from '../components/footer'
 
 import ProjectSummary from '../components/projectsummary'
+import Skill from '../components/skill'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faFileLines, faListUl, faRocket } from '@fortawesome/free-solid-svg-icons'
@@ -38,28 +39,28 @@ export default function Page() {
             <div className="mb-8">
               <h2 className="text-3xl font-bold text-neutral-800 my-4">Technical Skills</h2>
               <div className="flex flex-wrap">
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">HTML</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">CSS</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">C/C++</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Git</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">JavsScript</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">TailwindCSS</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Node</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">React</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Linux</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Responsive Design</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">SQL Basics</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Frameworks & Libraries</div>
+                <Skill>HTML</Skill>
+                <Skill>CSS</Skill>
+                <Skill>C/C++</Skill>
+                <Skill>Git</Skill>
+                <Skill>JavsScript</Skill>
+                <Skill>TailwindCSS</Skill>
+                <Skill>Node</Skill>
+                <Skill>React</Skill>
+                <Skill>Linux</Skill>
+                <Skill>Responsive Design</Skill>
+                <Skill>SQL Basics</Skill>
+                <Skill>Frameworks & Libraries</Skill>
               </div>
               <h2 className="text-3xl font-bold text-neutral-800 my-4">Personal Management Skills</h2>
               <div className="flex flex-wrap">
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Communication</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Prioritizing</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Planning</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Writing & Documenting</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Troubleshooting</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Time & Task Management</div>
-                <div className="rounded px-4 py-2 mr-4 mb-4 bg-neutral-200 text-neutral-500 font-bold text-base">Autonomous</div>
+                <Skill>Communication</Skill>
+                <Skill>Prioritizing</Skill>
+                <Skill>Planning</Skill>
+                <Skill>Writing & Documenting</Skill>
+                <Skill>Troubleshooting</Skill>
+                <Skill>Time & Task Management</Skill>
+                <Skill>Autonomous</Skill>
               </div>
             </div>
           </div>
