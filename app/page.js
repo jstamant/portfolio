@@ -3,6 +3,8 @@ import Link from 'next/link'
 import Header from '../components/header'
 import Footer from '../components/footer'
 
+import ProjectSummary from '../components/projectsummary'
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faFileLines, faListUl, faRocket } from '@fortawesome/free-solid-svg-icons'
 import { faMessage } from '@fortawesome/free-regular-svg-icons'
@@ -72,53 +74,26 @@ export default function Page() {
           <p className="my-8">Here are a few of my projects - available for you to check out!</p>
         </div>
         <div className="my-8 mx-auto w-11/12 lg:w-3/4 text-left flex flex-col gap-24">
-          <div className="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
-            <img className="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="/haiku.png"></img>
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <h2 className="font-bold text-3xl">Haiku React App</h2>
-              <p>I made this little React app to show-off some of my "buzzword haiku".</p>
-              <p>This project's goal was to learn React. Success!</p>
-              <a className="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
-                href="https://jstamant-haiku.netlify.app/" target="_blank">
-                <p>See live</p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
-              </a>
-              <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600" href="https://github.com/jstamant/haiku" target="_blank">
-                <p>Git Repo</p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
-              </a>
-            </div>
-          </div>
-          <div className="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
-            <img className="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="/zgp.png"></img>
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <h2 className="font-bold text-3xl">C/C++ Game</h2>
-              <p>A dive into low-level game programming with C/C++.</p>
-              <p>Whenever I spend time on this project, I find myself learning more about data-structures and algorithms.</p>
-              <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600" href="https://github.com/jstamant/zombie-game-project" target="_blank">
-                <p>Git Repo</p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
-              </a>
-            </div>
-          </div>
-          <div className="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
-            <img className="w-full shadow-xl rounded-2xl object-cover aspect-[4/3] border" src="/burger-burner.jpg"></img>
-            <div className="flex flex-col items-center md:items-start gap-4">
-              <h2 className="font-bold text-3xl">HTML5 Game</h2>
-              <p>My first project for learning JavaScript.</p>
-              <p>I wanted to learn how to make portable games using HTML5 and web technologies. Easily done with the help of the Phaser framework.</p>
-              <a className="flex items-center justify-center text-white font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl transition-colors duration-300 bg-theme-500 hover:bg-theme-600"
-                href="https://jstamant.itch.io/burger-burner" target="_blank">
-                <p>See live</p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
-              </a>
-              <a className="flex items-center justify-center font-bold text-lg h-16 rounded-lg w-64 uppercase shadow-xl border-2 transition-colors duration-300 bg-white text-theme-500 border-theme-500 hover:bg-theme-100 text-theme-600 hover:border-theme-600"
-                href="https://github.com/jstamant/burger-burner-deluxe" target="_blank">
-                <p>Git Repo</p>
-                <FontAwesomeIcon icon={faArrowUpRightFromSquare} className="ml-2" />
-              </a>
-            </div>
-          </div>
+          <ProjectSummary
+            title="Haiku React App"
+            text={['I made this little React app to show-off some of my "buzzword haiku".', "This project's goal was to learn React. Success!"]}
+            liveLink="https://jstamant-haiku.netlify.app/"
+            repoLink="https://github.com/jstamant/haiku"
+            imageSource="/haiku.png"
+          />
+          <ProjectSummary
+            title="C/C++ Game"
+            text={['A dive into low-level game programming with C/C++.', 'Whenever I spend time on this project, I find myself learning more about data-structures and algorithms.']}
+            repoLink="https://github.com/jstamant/zombie-game-project"
+            imageSource="/zgp.png"
+          />
+          <ProjectSummary
+            title="HTML5 Game"
+            text={['My first project for learning JavaScript.', 'I wanted to learn how to make portable games using HTML5 and web technologies. Easily done with the help of the Phaser framework.']}
+            liveLink="https://jstamant.itch.io/burger-burner"
+            repoLink="https://github.com/jstamant/burger-burner-deluxe"
+            imageSource="/burger-burner.jpg"
+          />
         </div>
       </section>
 
