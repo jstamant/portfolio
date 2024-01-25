@@ -5,6 +5,7 @@ import Footer from '../components/footer'
 
 import ProjectSummary from '../components/projectsummary'
 import Skill from '../components/skill'
+import LinkButton from '../components/linkbutton'
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowUpRightFromSquare, faFileLines, faListUl, faRocket } from '@fortawesome/free-solid-svg-icons'
@@ -18,10 +19,7 @@ export default function Page() {
         <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-3/4">
           <h1 className="font-title uppercase text-6xl font-bold text-neutral-800">Justin St-Amant, here</h1>
           <p className="mt-8 mb-10 text-2xl">{process.env.site.subtitle}</p>
-          <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
-    href="#about">See why
-            <FontAwesomeIcon icon={faRocket} className="ml-2" />
-          </a>
+          <LinkButton href="#about" text="See why" icon={faRocket} animate={true} className="mx-auto" />
         </div>
       </section>
 
@@ -65,7 +63,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-        <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300" href="#projects">My projects<FontAwesomeIcon icon={faListUl} className="ml-2" /></a>
+        <LinkButton href="#projects" text="My projects" icon={faListUl} animate={true} className="mx-auto" />
       </section>
 
       <section id="projects" className="py-24">
@@ -106,8 +104,7 @@ export default function Page() {
             <p className="my-4">Feel free to reach out!</p>
             <p className="my-4">I'm looking for a development position and would love to hear from you if you're interested!<br />I'm excited to see what kind of challenges the future brings!</p>
           </div>
-          <a className="block bg-theme-500 text-white font-bold text-lg p-4 rounded-lg w-64 mx-auto uppercase shadow-xl transition hover:bg-theme-600 hover:-translate-y-1 duration-300"
-            href="mailto:jstamant24@gmail.com"><FontAwesomeIcon icon={faMessage} className="mr-2" />Message me</a>
+          <LinkButton href="mailto:jstamant24@gmail.com" text="Message me" icon={faMessage} animate={true} className="mx-auto"/>
         </div>
       </section>
 
