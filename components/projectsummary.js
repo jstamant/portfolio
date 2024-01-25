@@ -3,7 +3,9 @@ import Image from 'next/image'
 import LinkButton from '../components/linkbutton'
 
 const ProjectSummary = ({title="title", text=["text"], liveLink, repoLink, imageSource}) => {
-  text = text.map(line => <p>{line}</p>);
+  for (let line = 0; line < text.length; line++) {
+    text[line] = <p key={line}>{text[line]}</p>;
+  }
   if (liveLink) {
     liveLink = <LinkButton href={liveLink} text="See live" target="_blank" />
   }
