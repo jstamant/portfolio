@@ -16,7 +16,7 @@ const ProjectSummary = (props) => {
   if (props.repoLink) repoLinkButton = <LinkButton href={props.repoLink} text="Git Repo" target="_blank" inverted={true} />;
   let image;
   if (props.imageSource) {
-    image = <img className="absolute" src={props.imageSource}></img>
+    image = <img className="absolute w-full" src={props.imageSource}></img>
   }
   return (
     <div className="grid gap-8 md:grid-cols-[1.5fr,1fr] items-center">
